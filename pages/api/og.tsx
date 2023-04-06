@@ -3,6 +3,7 @@ import { apiVersion, dataset, projectId } from 'lib/sanity.api'
 import type { NextRequest, NextResponse } from 'next/server'
 import type { PageConfig } from 'next/types'
 import { createClient } from 'next-sanity'
+import * as demo from 'lib/demo.data'
 
 export const config: PageConfig = { runtime: 'experimental-edge' }
 
