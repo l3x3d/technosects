@@ -3,12 +3,11 @@ import { apiVersion, dataset, projectId } from 'lib/sanity.api'
 import type { NextRequest, NextResponse } from 'next/server'
 import type { PageConfig } from 'next/types'
 import { createClient } from 'next-sanity'
-import * as demo from 'lib/demo.data'
 
 export const config: PageConfig = { runtime: 'experimental-edge' }
 
 import { height, OpenGraphImage, width } from 'components/OpenGraphImage'
-
+import * as demo from 'lib/demo.data'
 import { Settings, settingsQuery } from 'lib/sanity.queries'
 
 export default async function og(req: NextRequest, res: NextResponse) {
@@ -30,7 +29,7 @@ export default async function og(req: NextRequest, res: NextResponse) {
   }
 
   return new ImageResponse(
-    <OpenGraphImage title={title} />,
+    <OpenGraphImage title={title || demo.ogImageTitle} />,
     {
       width,
       height,
