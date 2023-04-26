@@ -1,1 +1,1 @@
-# A Next.js Blog + Sanity CMS
+Next.js Blog w Sanity CMS
