@@ -1,1 +1,1 @@
-# A Next.js Blog with a Native Authoring Experience<!-- omit in toc -->
+# A Next.js Blog + Sanity CMS
